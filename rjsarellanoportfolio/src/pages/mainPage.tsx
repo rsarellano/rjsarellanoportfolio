@@ -10,9 +10,16 @@ const MainPage = () => {
 
   const toggleCorporateProjects = () => {
     setShowCorporateProjects(!showCorporateProjects);
+    setShowPersonalProjects(false)
   };
 
 
+  const togglePersonalProjects = () => {
+    setShowPersonalProjects(!showPersonalProjects)
+    setShowCorporateProjects(false)
+  }
+
+  
 
 
 
@@ -29,8 +36,11 @@ const MainPage = () => {
           {showCorporateProjects }
           Corporate Projects
         </button>
+<button  className='m-5 w-[120px] h-[80px]'
+onClick={togglePersonalProjects}> Personal Projects </button>
 
 
+{showPersonalProjects && <PersonalProjects />}
         {showCorporateProjects && <CorporateProjects />}
       </div>
     </div>
