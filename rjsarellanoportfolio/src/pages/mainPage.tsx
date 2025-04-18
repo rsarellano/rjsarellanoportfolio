@@ -1,18 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react';
+import CorporateProjects from '../components/projects/corporate/corporateProjects';
+import PersonalProjects from '../components/projects/personal/personalProjects';
+import Header from '../components/header/header';
 
-import CorporateProjects from '../components/projects/corporate/corporateProjects'
-import PersonalProjects from '../components/projects/personal/personalProjects'
-import Header from '../components/header/header'
-const mainPage = () => {
+const MainPage = () => {
+
+  const [showCorporateProjects, setShowCorporateProjects] = useState(false)
+  const [showPersonalProjects, setShowPersonalProjects] = useState(false)
+
+  const toggleCorporateProjects = () => {
+    setShowCorporateProjects(!showCorporateProjects);
+  };
+
+
+
+
+
   return (
-    <div>mainPage
-        <div><Header/></div>
-        <div><div><CorporateProjects/> </div>
-        <div><PersonalProjects/></div></div>
+    <div>
+      <div><Header /></div>
+
+      <div className='container bg-sky-600'>
+       
+        <button 
+          className='m-5 w-[120px] h-[80px]' 
+          onClick={toggleCorporateProjects}
+        >
+          {showCorporateProjects }
+          Corporate Projects
+        </button>
+
+
+        {showCorporateProjects && <CorporateProjects />}
+      </div>
     </div>
+  );
+};
 
-    
-  )
-}
-
-export default mainPage
+export default MainPage;
