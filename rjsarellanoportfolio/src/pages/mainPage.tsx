@@ -25,10 +25,14 @@ const MainPage = () => {
 
   return (
     <div>
-      <div><Header /></div>
+      <div>
 
-      <div className='container bg-sky-600'>
-       
+
+     
+      </div>
+
+      <div className='container bg-sky-600 mb-2 position: relative'>
+       <div className='h-[800px] w-[900px]'>
         <button 
           className='m-5 w-[120px] h-[80px]' 
           onClick={toggleCorporateProjects}
@@ -42,6 +46,7 @@ onClick={togglePersonalProjects}> Personal Projects </button>
 
 {showPersonalProjects && <PersonalProjects />}
         {showCorporateProjects && <CorporateProjects />}
+        </div>
       </div>
     </div>
   );
