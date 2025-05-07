@@ -39,14 +39,14 @@ const MainPage = () => {
 
         <button
           onClick={() => scrollToSection(services)}
-          className="hover:underlined"
+          className="hover:underline"
         >
           Services
         </button>
 
         <button
           onClick={() => scrollToSection(projects)}
-          className="hover:underlined"
+          className="hover:underline"
         >
           Projects
         </button>
