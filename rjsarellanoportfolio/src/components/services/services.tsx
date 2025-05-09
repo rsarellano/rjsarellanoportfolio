@@ -5,8 +5,8 @@ const Services = () => {
   const [moveLeft, setMoveLeft] = useState(false);
 
   return (
-    <div className="flex justify-center h-[1400px] bg-sky-200">
-      <div className="relative w-full h-[1400px] bg-gray-100">
+    <div className="flex justify-center h-[1600px] bg-sky-200">
+      <div className="relative w-full h-[1600px] bg-gray-100">
         <div
           className={`
             absolute top-[100px] bottom-[50px] left-2/6 w-px bg-black
@@ -22,7 +22,7 @@ const Services = () => {
               >
                 Web Development
               </button>
-              <div>
+              <div className="absolute mt-[180px]">
                 <WebDevelopment />
               </div>
             </div>
