@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WebDevelopment from "./webDevelopment";
+import Qa from "./qa";
 
 const Services = () => {
   const [moveLeft, setMoveLeft] = useState(false);
@@ -27,9 +28,7 @@ const Services = () => {
               </div>
             </div>
             <div>
-              <button className="px-4 py-2 bg-blue-600 text-black rounded shadow">
-                QA Automation
-              </button>
+              <Qa />
             </div>
             <div>
               <button className="px-4 py-2 bg-blue-600 text-black rounded shadow">
