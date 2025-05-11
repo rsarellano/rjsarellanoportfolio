@@ -4,6 +4,8 @@ import QaContent from "./qa";
 
 const Services = () => {
   const [moveLeft, setMoveLeft] = useState(false);
+  const [qaMoveleft, setQaMoveLeft] = useState(false);
+  const [supportMoveLeft, setSupportMoveLeft] = useState(false);
 
   return (
     <div className="flex justify-center h-[1600px] bg-sky-200">
@@ -11,7 +13,7 @@ const Services = () => {
         <div className="absolute top-0 left-4 flex flex-col space-y-[150px]">
           <div
             className={` h-[400px]
-            absolute top-[100px] bottom-[50px] left-2/6 w-px bg-black
+            absolute top-[100px] bottom-[50px] left-[25%] w-px bg-black
             transform transition-transform duration-700
             ${moveLeft ? "-translate-x-[300px]" : "-translate-x-1/2"}
           `}
@@ -27,10 +29,18 @@ const Services = () => {
             </div>
           </div>
           <div
-            className={`h-[400px] absolute top-[100px] bottom-[50px] left-2/6 w-px bg-black transform transition-transform duration-700
-            ${moveLeft ? "-translate-x-[300px]" : "-translate-x-1/2"}`}
+            className={`h-[400px] absolute top-[500px] bottom-[50px] left-[25%] w-px bg-black transform transition-transform duration-700
+            ${qaMoveleft ? "-translate-x-[300px]" : "-translate-x-1/2"}`}
           >
-            <QaContent />
+            <button
+              onClick={() => setQaMoveLeft(true)}
+              className="px-4 py-2 bg-blue-600 text-black rounded shadow"
+            >
+              QA
+            </button>
+            <div className="absolute mt-[180px]">
+              <QaContent />
+            </div>
           </div>
           <div>
             <button className="px-4 py-2 bg-blue-600 text-black rounded shadow">
