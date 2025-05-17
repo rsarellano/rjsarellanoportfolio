@@ -1,9 +1,17 @@
 import React from "react";
 
+const cards = [
+  "Information Gathering",
+  "Planning",
+  "Design",
+  "Development",
+  "Testing",
+  "Maintenance and Update",
+];
+
 const webDevelopment = () => {
   return (
     <div className="flex justify-center overflow-hidden">
-      
       <div className="webDevelopmentCards w-[150px] m-2  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <h3 className="">Planning</h3>
       </div>
@@ -11,7 +19,6 @@ const webDevelopment = () => {
       <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <h3>Information Gathering</h3>
       </div>
-
 
       <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <h3>Design</h3>
