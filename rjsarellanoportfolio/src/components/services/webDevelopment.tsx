@@ -12,12 +12,28 @@ const cards = [
 const webDevelopment = () => {
   return (
     <div className="flex justify-center overflow-hidden">
-      <div className="webDevelopmentCards w-[150px] m-2  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3 className="">Planning</h3>
+      <div>
+        <div>
+          <h3>Planning Card</h3>
+        </div>
+        <div className="webDevelopmentCards w-[150px] h-[50px] m-2  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3 className="">Planning</h3>
+        </div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Information Gathering</h3>
+      <div>
+        <div>
+          {" "}
+          <h3>Information Gathering</h3>
+        </div>
+
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <div>
+            <h3>Planning Card</h3>
+          </div>
+
+          <h3>Information Gathering Card</h3>
+        </div>
       </div>
 
       <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
