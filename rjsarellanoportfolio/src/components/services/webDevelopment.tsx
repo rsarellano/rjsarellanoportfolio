@@ -45,16 +45,24 @@ const webDevelopment = () => {
         <div>Development Card</div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Testing</h3>
+      <div>
+        <div>Testing Card</div>
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3>Testing</h3>
+        </div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Deployment</h3>
+      <div>
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3>Deployment</h3>
+        </div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Maintenance and Updates</h3>
+      <div>
+        <div>Maintenance Card</div>
+        <div className="webDevelopmentCards w-[150px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3>Maintenance and Updates</h3>
+        </div>
       </div>
     </div>
   );
