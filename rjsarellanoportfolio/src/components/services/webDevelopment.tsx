@@ -22,26 +22,27 @@ const webDevelopment = () => {
       </div>
 
       <div>
-        <div>
-          {" "}
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Information Gathering</h3>
         </div>
 
-        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <div>
-            <h3>Planning Card</h3>
-          </div>
-
+        <div>
           <h3>Information Gathering Card</h3>
         </div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Design</h3>
+      <div>
+        <div>Design Card</div>
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3>Design</h3>
+        </div>
       </div>
 
-      <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <h3>Development</h3>
+      <div>
+        <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <h3>Development</h3>
+        </div>
+        <div>Development Card</div>
       </div>
 
       <div className="webDevelopmentCards w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
