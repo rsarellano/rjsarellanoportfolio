@@ -24,7 +24,7 @@ const Services = () => {
             >
               Web Development
             </button>
-            <div className="absolute mt-[95px] ">
+            <div className="absolute mt-[55px] ">
               <WebDevelopmentContent />
             </div>
           </div>
