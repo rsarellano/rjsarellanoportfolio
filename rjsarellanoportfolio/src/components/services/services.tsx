@@ -10,9 +10,9 @@ const Services = () => {
   return (
     <div className="flex justify-center h-[1600px] bg-sky-200">
       <div className=" relative w-full  h-[1600px] bg-gray-100">
-        <div className=" absolute top-0 ml-[600px] left-4 flex  flex-col space-y-[150px]">
+        <div className=" absolute top-0 ml-[600px]  left-4 flex  flex-col space-y-[150px]">
           <div
-            className={` webDevelopment h-[400px]
+            className={` webDevelopment h-[400px] 
             absolute top-[100px] bottom-[50px] left-[25%] w-px bg-black
             transform transition-transform duration-700
             ${moveLeft ? "-translate-x-[600px]" : "-translate-x-1/2"}
@@ -24,7 +24,7 @@ const Services = () => {
             >
               Web Development
             </button>
-            <div className="absolute mt-[180px]">
+            <div className="absolute mt-[95px] ">
               <WebDevelopmentContent />
             </div>
           </div>
