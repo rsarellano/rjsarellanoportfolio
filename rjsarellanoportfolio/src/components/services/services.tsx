@@ -25,7 +25,10 @@ const Services = () => {
               Web Development
             </button>
             <div className="absolute mt-[55px] w-auto ">
-              <WebDevelopmentContent triggerVisible={moveLeft} />
+              <WebDevelopmentContent
+                triggerVisibleSubCards={moveLeft}
+                triggerVissibleCards={moveLeft}
+              />
             </div>
           </div>
           <div

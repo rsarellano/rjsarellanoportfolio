@@ -9,24 +9,41 @@ const cards = [
   "Maintenance and Update",
 ];
 
-const webDevelopment = ({ triggerVisible }: { triggerVisible: boolean }) => {
+type WebDevProps = {
+  triggerVisibleSubCards: boolean;
+  triggerVissibleCards: boolean;
+};
+
+const webDevelopment = ({
+  triggerVisibleSubCards,
+  triggerVissibleCards,
+}: WebDevProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (triggerVisible) {
+    if (triggerVisibleSubCards) {
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [triggerVisible]);
+  }, [triggerVisibleSubCards]);
+
+  useEffect(() => {
+    if (triggerVissibleCards) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [triggerVissibleCards]);
 
   return (
     <div className="flex justify-center gap-8 overflow-hidden">
       <div className=" webDevMainCard bg-red-500 h-[250px]  p-4 w-[200px] rounded">
         <div className="h-[24px]">{isVisible && <h3>Planning Card</h3>}</div>
         <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[64px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <h3 className="">Planning</h3>
+          {isVisible && <h3>Planning </h3>}
         </div>
       </div>
 
