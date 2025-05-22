@@ -19,6 +19,7 @@ const webDevelopment = ({
   triggerVissibleCards,
 }: WebDevProps) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isVissibleMainCard, setIsVisibleMainCard] = useState(false);
 
   useEffect(() => {
     if (triggerVisibleSubCards) {
@@ -32,7 +33,7 @@ const webDevelopment = ({
   useEffect(() => {
     if (triggerVissibleCards) {
       const timer = setTimeout(() => {
-        setIsVisible(true);
+        setIsVisibleMainCard(true);
       }, 500);
       return () => clearTimeout(timer);
     }
@@ -42,8 +43,12 @@ const webDevelopment = ({
     <div className="flex justify-center gap-8 overflow-hidden">
       <div className=" webDevMainCard bg-red-500 h-[250px]  p-4 w-[200px] rounded">
         <div className="h-[24px]">{isVisible && <h3>Planning Card</h3>}</div>
+        {isVisible && (
+          <div className="w-px h-20 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
+        )}
+
         <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[64px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          {isVisible && <h3>Planning </h3>}
+          {isVissibleMainCard && <h3>Planning </h3>}
         </div>
       </div>
 
