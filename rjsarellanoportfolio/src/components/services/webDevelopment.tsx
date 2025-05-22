@@ -11,15 +11,18 @@ const cards = [
 
 type WebDevProps = {
   triggerVisibleSubCards: boolean;
-  triggerVissibleCards: boolean;
+  triggerVisibleCards: boolean;
+  triggerVisibleDiagonalLine: boolean;
 };
 
 const webDevelopment = ({
   triggerVisibleSubCards,
-  triggerVissibleCards,
+  triggerVisibleCards,
+  triggerVisibleDiagonalLine,
 }: WebDevProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isVissibleMainCard, setIsVisibleMainCard] = useState(false);
+  const [isVisibleDiagonalLine, isSetVisibleDiagonalLine] = useState(false);
 
   useEffect(() => {
     if (triggerVisibleSubCards) {
@@ -31,20 +34,29 @@ const webDevelopment = ({
   }, [triggerVisibleSubCards]);
 
   useEffect(() => {
-    if (triggerVissibleCards) {
+    if (triggerVisibleCards) {
       const timer = setTimeout(() => {
         setIsVisibleMainCard(true);
       }, 500);
       return () => clearTimeout(timer);
     }
-  }, [triggerVissibleCards]);
+  }, [triggerVisibleCards]);
+
+  useEffect(() => {
+    if (triggerVisibleDiagonalLine) {
+      const timer = setTimeout(() => {
+        isSetVisibleDiagonalLine(true);
+      }, 800);
+      return () => clearTimeout(timer);
+    }
+  }, [triggerVisibleDiagonalLine]);
 
   return (
     <div className="flex justify-center gap-8 overflow-hidden">
       <div className=" webDevMainCard bg-red-500 h-[250px]  p-4 w-[200px] rounded">
         <div className="h-[24px]">{isVisible && <h3>Planning Card</h3>}</div>
-        {isVisible && (
-          <div className="w-px h-20 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
+        {isVisibleDiagonalLine && (
+          <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
         )}
 
         <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[64px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">

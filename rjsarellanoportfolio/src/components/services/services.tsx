@@ -27,7 +27,8 @@ const Services = () => {
             <div className="absolute mt-[55px] w-auto ">
               <WebDevelopmentContent
                 triggerVisibleSubCards={moveLeft}
-                triggerVissibleCards={moveLeft}
+                triggerVisibleCards={moveLeft}
+                triggerVisibleDiagonalLine={moveLeft}
               />
             </div>
           </div>
