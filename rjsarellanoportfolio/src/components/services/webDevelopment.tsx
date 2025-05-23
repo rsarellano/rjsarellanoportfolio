@@ -23,6 +23,7 @@ const webDevelopment = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isVissibleMainCard, setIsVisibleMainCard] = useState(false);
   const [isVisibleDiagonalLine, isSetVisibleDiagonalLine] = useState(false);
+  const [visibleCardCount, setIsVisibleCardCount] = useState(0);
 
   useEffect(() => {
     if (triggerVisibleSubCards) {
@@ -39,6 +40,16 @@ const webDevelopment = ({
         setIsVisibleMainCard(true);
       }, 500);
       return () => clearTimeout(timer);
+    }
+  }, [triggerVisibleCards]);
+
+  useEffect(() => {
+    if (triggerVisibleCards) {
+      cards.forEach((_, index) => {
+        setTimeout(() => {
+          setIsVisibleCardCount((prev) => prev + 1);
+        }, 500 * index);
+      });
     }
   }, [triggerVisibleCards]);
 
@@ -66,9 +77,7 @@ const webDevelopment = ({
 
       <div className="webDevMainCard bg-red-500 p-4 w-[200px] rounded">
         <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[85px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <div>
-            <h3>Information Gathering</h3>
-          </div>
+          <div>{isVissibleMainCard && <h3>Information Gathering</h3>}</div>
         </div>
 
         <div>
