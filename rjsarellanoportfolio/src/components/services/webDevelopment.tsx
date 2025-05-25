@@ -70,7 +70,7 @@ const webDevelopment = ({
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
         )}
 
-        <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[64px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           {isVissibleMainCard && <h3>Planning </h3>}
         </div>
       </div>
@@ -85,15 +85,15 @@ const webDevelopment = ({
         </div>
       </div>
 
-      <div>
+      <div className="webDevMainCard  bg-red-500 p-4 w-[200px] rounded ">
         <div>Design Card</div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Design</h3>
         </div>
       </div>
 
       <div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 mt-[85px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Development</h3>
         </div>
         <div>Development Card</div>
