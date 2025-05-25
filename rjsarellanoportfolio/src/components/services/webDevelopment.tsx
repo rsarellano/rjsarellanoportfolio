@@ -92,7 +92,7 @@ const webDevelopment = ({
         </div>
       </div>
 
-      <div>
+      <div className="webDevMainCard  bg-red-500 p-4 w-[200px] rounded " >
         <div className="webDevelopmentCards h-[65px] w-[150px] m-2 mt-[85px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Development</h3>
         </div>
