@@ -78,7 +78,9 @@ const webDevelopment = ({
 
       <div className="webDevMainCard bg-red-500 p-4 w-[200px] rounded">
         <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[85px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-       
+        {isVisibleDiagonalLine && (
+          <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
+        )}
           <div>{isVissibleMainCard && <h3>Information Gathering</h3>}</div>
         </div>
 
