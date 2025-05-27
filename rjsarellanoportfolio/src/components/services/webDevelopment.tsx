@@ -43,15 +43,26 @@ const webDevelopment = ({
     }
   }, [triggerVisibleCards]);
 
+  // useEffect(() => {
+  //   if (triggerVisibleCards) {
+  //     cards.forEach((_, index) => {
+  //       setTimeout(() => {
+  //         setIsVisibleCardCount((prev) => prev + 1);
+  //       }, 500 * index);
+  //     });
+  //   }
+  // }, [triggerVisibleCards]);
+
+
+
   useEffect(() => {
-    if (triggerVisibleCards) {
-      cards.forEach((_, index) => {
-        setTimeout(() => {
-          setIsVisibleCardCount((prev) => prev + 1);
-        }, 500 * index);
-      });
+    if(triggerVisibleCards) {
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 400 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 800 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 1200 )
+
     }
-  }, [triggerVisibleCards]);
+  }, [triggerVisibleCards])
 
   useEffect(() => {
     if (triggerVisibleDiagonalLine) {
