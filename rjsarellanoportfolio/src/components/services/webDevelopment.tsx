@@ -57,9 +57,11 @@ const webDevelopment = ({
 
   useEffect(() => {
     if(triggerVisibleCards) {
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 400 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 800 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 1200 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 200 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 300 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 400 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 500 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 600 )
 
     }
   }, [triggerVisibleCards])
@@ -74,24 +76,29 @@ const webDevelopment = ({
   }, [triggerVisibleDiagonalLine]);
 
   return (
-    <div className="flex justify-center gap-8 overflow-hidden">
-      <div className=" webDevMainCard bg-red-500 h-[260px]  p-4 w-[200px] rounded">
+    <div className="flex justify-center gap-1 overflow-hidden ml-[20px]">
+
+      {/* Planning */}
+      <div className=" webDevMainCard bg-gray-500 h-[260px]  w-[180px] rounded">
         <div className="h-[24px]">{isVisible && <h3>Planning Card</h3>}</div>
         {isVisibleDiagonalLine && (
-          <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
+          <div className="diagonalLine w-px h-7 bg-black absolute top-20 left-24 transform rotate-[234deg] origin-top z-0"></div>
         )}
 
-        <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           
           {isVissibleMainCard && <h3>Planning </h3>}
         </div>
       </div>
 
-      <div className="webDevMainCard bg-red-500 p-4 w-[200px] rounded">
-        <div className="webDevelopmentCards h-[65px] w-[150px]  m-2 mt-[85px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        {isVisibleDiagonalLine && (
+
+
+{/* Information Gathering */}
+      <div className="webDevMainCard bg-gray-500 w-[180px] rounded">
+        <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[87px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        {/* {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
-        )}
+        )} */}
           <div>{isVissibleMainCard && <h3>Information Gathering</h3>}</div>
         </div>
 
@@ -100,15 +107,17 @@ const webDevelopment = ({
         </div>
       </div>
 
-      <div className="webDevMainCard  bg-red-500 p-4 w-[200px] rounded ">
+{/* Design */}
+      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div>Design Card</div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Design</h3>
         </div>
       </div>
 
-      <div className="webDevMainCard  bg-red-500 p-4 w-[200px] rounded " >
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 mt-[85px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+{/* Information Gathering */}
+      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded " >
+        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[85px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Development</h3>
         </div>
         <div>Development Card</div>
@@ -116,20 +125,20 @@ const webDevelopment = ({
 
       <div>
         <div>Testing Card</div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Testing</h3>
         </div>
       </div>
 
       <div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Deployment</h3>
         </div>
       </div>
 
       <div>
         <div>Maintenance Card</div>
-        <div className="webDevelopmentCards h-[65px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <h3>Maintenance and Updates</h3>
         </div>
       </div>
