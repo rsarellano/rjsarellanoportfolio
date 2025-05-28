@@ -57,11 +57,11 @@ const webDevelopment = ({
 
   useEffect(() => {
     if(triggerVisibleCards) {
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 200 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 300 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 400 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 500 )
-      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 600 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 250 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 350 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 450 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 550 )
+      setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 650 )
 
     }
   }, [triggerVisibleCards])
@@ -80,14 +80,14 @@ const webDevelopment = ({
 
       {/* Planning */}
       <div className=" webDevMainCard bg-gray-500 h-[260px]  w-[180px] rounded">
-        <div className="h-[24px]">{isVisible && <h3>Planning Card</h3>}</div>
+        <div className="h-[24px]">{visibleCardCount >= 1 && <h3>Planning Card</h3>}</div>
         {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-7 bg-black absolute top-20 left-24 transform rotate-[234deg] origin-top z-0"></div>
         )}
 
         <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           
-          {isVissibleMainCard && <h3>Planning </h3>}
+          {visibleCardCount >= 1 &&  <h3>Planning </h3>}
         </div>
       </div>
 
@@ -99,7 +99,7 @@ const webDevelopment = ({
         {/* {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
         )} */}
-          <div>{isVissibleMainCard && <h3>Information Gathering</h3>}</div>
+          <div>{visibleCardCount >= 2 &&  <h3>Information Gathering</h3>}</div>
         </div>
 
         <div>
@@ -111,7 +111,7 @@ const webDevelopment = ({
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div>Design Card</div>
         <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <h3>Design</h3>
+          <div>{ visibleCardCount >= 3 &&   <h3>Design</h3>  }</div>
         </div>
       </div>
 
