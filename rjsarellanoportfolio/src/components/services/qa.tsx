@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Qa = () => {
+type QaProps = { 
+  triggerVisibleSubCards: boolean;
+  triggerVisibleCards: boolean;
+  triggerVisibleDiagonalLine: boolean;
+}
+
+
+
+
+const Qa = ({triggerVisibleCards,triggerVisibleSubCards,triggerVisibleDiagonalLine}: QaProps ) => {
+  
+  
+  useEffect(() => {
+  
+  }
+  
+  )
+  
+  
   return (
     <div className="flex justify-center gap-1 overflow-hidden ml-[20px]">
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
