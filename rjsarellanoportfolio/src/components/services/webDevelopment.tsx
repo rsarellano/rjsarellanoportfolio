@@ -135,7 +135,9 @@ const webDevelopment = ({
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <div>{visibleCardCount >= 6 && <h3>Deployment</h3>}</div>
+         
         </div>
+        <div className="">Deployment Card</div>
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
