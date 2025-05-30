@@ -25,23 +25,23 @@ const webDevelopment = ({
   const [isVisibleDiagonalLine, isSetVisibleDiagonalLine] = useState(false);
   const [visibleCardCount, setIsVisibleCardCount] = useState(0);
 
-  useEffect(() => {
-    if (triggerVisibleSubCards) {
-      const timer = setTimeout(() => {
-        setIsVisible(true);
-      }, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [triggerVisibleSubCards]);
+  // useEffect(() => {
+  //   if (triggerVisibleSubCards) {
+  //     const timer = setTimeout(() => {
+  //       setIsVisible(true);
+  //     }, 1000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [triggerVisibleSubCards]);
 
-  useEffect(() => {
-    if (triggerVisibleCards) {
-      const timer = setTimeout(() => {
-        setIsVisibleMainCard(true);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [triggerVisibleCards]);
+  // useEffect(() => {
+  //   if (triggerVisibleCards) {
+  //     const timer = setTimeout(() => {
+  //       setIsVisibleMainCard(true);
+  //     }, 500);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [triggerVisibleCards]);
 
   // useEffect(() => {
   //   if (triggerVisibleCards) {

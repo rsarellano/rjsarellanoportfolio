@@ -44,9 +44,9 @@ const Services = () => {
             </button>
             <div className=" qa absolute mt-[80px]">
               <QaContent 
-               triggerVisibleSubCards={moveLeft}
-               triggerVisibleCards={moveLeft}
-               triggerVisibleDiagonalLine={moveLeft}/>
+               triggerVisibleSubCardsQa={moveLeft}
+               triggerVisibleCardsQa={moveLeft}
+               triggerVisibleDiagonalLineQa={moveLeft}/>
             </div>
           </div>
           <div
