@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 type QaProps = { 
   triggerVisibleSubCards: boolean;
@@ -11,9 +11,14 @@ type QaProps = {
 
 const Qa = ({triggerVisibleCards,triggerVisibleSubCards,triggerVisibleDiagonalLine}: QaProps ) => {
   
+  const[isVisibleMainCard, setIsVisibleMainCard] = useState(false)
+  const [visibleCardCount, setIsVisibleCardCount] = useState(0)
   
   useEffect(() => {
-  
+  if(triggerVisibleCards) {
+    setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 450 )
+    setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 490 )
+  }
   }
   
   )
