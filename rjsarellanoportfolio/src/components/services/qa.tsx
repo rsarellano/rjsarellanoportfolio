@@ -16,8 +16,8 @@ const Qa = ({triggerVisibleCardsQa,triggerVisibleSubCardsQa,triggerVisibleDiagon
   
   useEffect(() => {
   if(triggerVisibleCardsQa) {
-    setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 450 )
-    setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 490 )
+    // setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 450 )
+    // setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 490 )
   }
   },[triggerVisibleCardsQa]
   
