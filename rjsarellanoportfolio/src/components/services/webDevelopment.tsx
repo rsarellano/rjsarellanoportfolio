@@ -25,33 +25,6 @@ const webDevelopment = ({
   const [isVisibleDiagonalLine, isSetVisibleDiagonalLine] = useState(false);
   const [visibleCardCount, setIsVisibleCardCount] = useState(0);
 
-  // useEffect(() => {
-  //   if (triggerVisibleSubCards) {
-  //     const timer = setTimeout(() => {
-  //       setIsVisible(true);
-  //     }, 1000);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [triggerVisibleSubCards]);
-
-  // useEffect(() => {
-  //   if (triggerVisibleCards) {
-  //     const timer = setTimeout(() => {
-  //       setIsVisibleMainCard(true);
-  //     }, 500);
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [triggerVisibleCards]);
-
-  // useEffect(() => {
-  //   if (triggerVisibleCards) {
-  //     cards.forEach((_, index) => {
-  //       setTimeout(() => {
-  //         setIsVisibleCardCount((prev) => prev + 1);
-  //       }, 500 * index);
-  //     });
-  //   }
-  // }, [triggerVisibleCards]);
 
 
 
@@ -67,20 +40,6 @@ const webDevelopment = ({
 
     }
   }, [triggerVisibleCards])
-
-  
-  // useEffect(() => {
-  //   if(triggerVisibleCards) {
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,1)), 450 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,2)), 490 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,3)), 530 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,4)), 570 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,5)), 610 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,6)), 650 )
-  //     setTimeout(() => setIsVisibleCardCount((prev) => Math.max(prev,7)), 700 )
-
-  //   }
-  // }, [triggerVisibleCards])
 
   useEffect(() => {
     if (triggerVisibleDiagonalLine) {
@@ -101,23 +60,23 @@ const webDevelopment = ({
           <div className="diagonalLine w-px h-7 bg-black absolute top-20 left-24 transform rotate-[234deg] origin-top z-0"></div>
         )}
 
-        <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+{visibleCardCount >= 1 &&  <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[63px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           
-          {visibleCardCount >= 1 &&  <h3>Planning </h3>}
-        </div>
+         <h3>Planning </h3>
+        </div>}
       </div>
 
 
 
 {/* Information Gathering */}
       <div className="webDevMainCard bg-gray-500 w-[180px] rounded">
-        <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[87px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+      {visibleCardCount >= 2 &&   <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[87px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         {/* {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
         )} */}
-          <div>{visibleCardCount >= 2 &&  <h3>Information Gathering</h3>}</div>
+          <div><h3>Information Gathering</h3></div>
         </div>
-
+      }
         <div>
           {isVisible && <h3>Information Gathering Card</h3>}
         </div>
@@ -126,39 +85,39 @@ const webDevelopment = ({
 {/* Design */}
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div>Design Card</div>
-        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <div>{ visibleCardCount >= 3 &&   <h3>Design</h3>  }</div>
-        </div>
+        { visibleCardCount >= 3 &&   <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <div><h3>Design</h3>  </div>
+        </div>}
       </div>
 
 {/* Information Gathering */}
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded " >
-        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-         <div>{visibleCardCount >= 4 && <h3>Development</h3> }</div>
-        </div>
+      {visibleCardCount >= 4 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+         <div><h3>Development</h3> </div>
+        </div>}
         <div>Development Card</div>
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div className="">Testing Card</div>
-        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-        <div>{visibleCardCount >= 5 && <h3>Testing</h3>}</div>
-        </div>
+        {visibleCardCount >= 5 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+        <div><h3>Testing</h3></div>
+        </div> }
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
-        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <div>{visibleCardCount >= 6 && <h3>Deployment</h3>}</div>
+      {visibleCardCount >= 6 &&  <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+          <div><h3>Deployment</h3></div>
          
-        </div>
+        </div>}
         <div className="">Deployment Card</div>
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
         <div>Maintenance Card</div>
-        <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-         <div>{visibleCardCount >= 7 && <h3>Maintenance and Updates</h3>}</div>
-        </div>
+        {visibleCardCount >= 7 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
+         <div><h3>Maintenance and Updates</h3></div>
+        </div>}
       </div>
     </div>
   );
