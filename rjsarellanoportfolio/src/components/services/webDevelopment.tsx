@@ -24,7 +24,7 @@ const webDevelopment = ({
   const [isVisibleMainCard, setIsVisibleMainCard] = useState(false);
   const [isVisibleDiagonalLine, isSetVisibleDiagonalLine] = useState(false);
   const [visibleCardCount, setIsVisibleCardCount] = useState(0);
-
+const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
 
 
 
@@ -40,6 +40,18 @@ const webDevelopment = ({
 
     }
   }, [triggerVisibleCards])
+
+  useEffect(() => {
+    if(triggerVisibleSubCards) {
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,1)), 650 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,2)), 750 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 850 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,1)), 950 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,2)), 1050 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 1150 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 1250 )
+    }
+  }, [triggerVisibleSubCards])
 
   useEffect(() => {
     if (triggerVisibleDiagonalLine) {
@@ -78,7 +90,7 @@ const webDevelopment = ({
         </div>
       }
         <div>
-          {isVisible && <h3>Information Gathering Card</h3>}
+          <h3>Information Gathering Card</h3>
         </div>
       </div>
 
