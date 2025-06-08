@@ -67,7 +67,7 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
 
       {/* Planning */}
       <div className=" webDevMainCard bg-gray-500 h-[260px]  w-[180px] rounded">
-        <div className="h-[24px]">{visibleCardCount >= 1 && <h3>Planning Card</h3>}</div>
+        <div className="h-[24px]">{visibleSubCardCount >= 1 && <h3>Planning Card</h3>}</div>
         {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-7 bg-black absolute top-20 left-24 transform rotate-[234deg] origin-top z-0"></div>
         )}
@@ -86,11 +86,11 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
         {/* {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
         )} */}
-          <div><h3>Information Gathering</h3></div>
+         <div> <h3>Information Gathering</h3> </div>
         </div>
       }
-        <div>
-          <h3>Information Gathering Card</h3>
+        <div> {visibleSubCardCount >= 2 &&   
+          <h3>Information Gathering Card</h3>}
         </div>
       </div>
 
