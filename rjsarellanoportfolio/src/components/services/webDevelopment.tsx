@@ -46,10 +46,10 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
       setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,1)), 650 )
       setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,2)), 750 )
       setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 850 )
-      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,1)), 950 )
-      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,2)), 1050 )
-      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 1150 )
-      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,3)), 1250 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,4)), 950 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,5)), 1050 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,6)), 1150 )
+      setTimeout(() => setVisibleSubCardCount((prev) => Math.max(prev,7)), 1250 )
     }
   }, [triggerVisibleSubCards])
 
@@ -96,9 +96,9 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
 
 {/* Design */}
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
-        <div>Design Card</div>
+      <div className="h-[24px]">  {visibleSubCardCount >= 3 &&  <h3>Design Card</h3> }</div> 
         { visibleCardCount >= 3 &&   <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
-          <div><h3>Design</h3>  </div>
+        <div><h3>Design</h3>  </div>
         </div>}
       </div>
 
@@ -107,11 +107,11 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
       {visibleCardCount >= 4 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
          <div><h3>Development</h3> </div>
         </div>}
-        <div>Development Card</div>
+        <div>{visibleSubCardCount >= 4 && <h3>Development Card</h3>}</div>
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
-        <div className="">Testing Card</div>
+        <div className="h-[24px]">{ visibleSubCardCount >= 5 && <h3>Testing Card</h3>}</div>
         {visibleCardCount >= 5 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <div><h3>Testing</h3></div>
         </div> }
@@ -122,11 +122,11 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
           <div><h3>Deployment</h3></div>
          
         </div>}
-        <div className="">Deployment Card</div>
+        <div className="">{visibleSubCardCount >= 6 && <h3>Deployment Card</h3>}</div>
       </div>
 
       <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
-        <div>Maintenance Card</div>
+        <div className="h-[24px]">{ visibleSubCardCount >= 7 && <h3> Maintenance Card</h3> }</div>
         {visibleCardCount >= 7 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
          <div><h3>Maintenance and Updates</h3></div>
         </div>}
