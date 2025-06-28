@@ -66,7 +66,7 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
     <div className="flex justify-center gap-1 overflow-hidden ml-[20px]">
 
       {/* Planning */}
-      <div className=" webDevMainCard bg-gray-500 h-[260px]  w-[180px] rounded">
+      <div className=" webDevMainCard h-[260px]  w-[180px] rounded">
         <div className="h-[24px]">{visibleSubCardCount >= 1 && <h3>Planning Card</h3>}</div>
         {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-7 bg-black absolute top-20 left-24 transform rotate-[234deg] origin-top z-0"></div>
@@ -81,7 +81,7 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
 
 
 {/* Information Gathering */}
-      <div className="webDevMainCard bg-gray-500 w-[180px] rounded">
+      <div className="webDevMainCard w-[180px] rounded">
       {visibleCardCount >= 2 &&   <div className="webDevelopmentCards h-[49px] w-[150px]  m-2 mt-[87px]  my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         {/* {isVisibleDiagonalLine && (
           <div className="diagonalLine w-px h-12 bg-black absolute top-20 left-24 transform rotate-[220deg] origin-top z-0"></div>
@@ -95,7 +95,7 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
       </div>
 
 {/* Design */}
-      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
+      <div className="webDevMainCard  w-[180px] rounded ">
       <div className="h-[24px]">  {visibleSubCardCount >= 3 &&  <h3>Design Card</h3> }</div> 
         { visibleCardCount >= 3 &&   <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <div><h3>Design</h3>  </div>
@@ -103,21 +103,21 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
       </div>
 
 {/* Information Gathering */}
-      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded " >
+      <div className="webDevMainCard  w-[180px] rounded " >
       {visibleCardCount >= 4 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
          <div><h3>Development</h3> </div>
         </div>}
         <div>{visibleSubCardCount >= 4 && <h3>Development Card</h3>}</div>
       </div>
 
-      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
+      <div className="webDevMainCard  w-[180px] rounded ">
         <div className="h-[24px]">{ visibleSubCardCount >= 5 && <h3>Testing Card</h3>}</div>
         {visibleCardCount >= 5 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
         <div><h3>Testing</h3></div>
         </div> }
       </div>
 
-      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
+      <div className="webDevMainCard w-[180px] rounded ">
       {visibleCardCount >= 6 &&  <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[87px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
           <div><h3>Deployment</h3></div>
          
@@ -125,7 +125,7 @@ const [visibleSubCardCount, setVisibleSubCardCount] = useState(0);
         <div className="">{visibleSubCardCount >= 6 && <h3>Deployment Card</h3>}</div>
       </div>
 
-      <div className="webDevMainCard  bg-gray-500 w-[180px] rounded ">
+      <div className="webDevMainCard  w-[180px] rounded ">
         <div className="h-[24px]">{ visibleSubCardCount >= 7 && <h3> Maintenance Card</h3> }</div>
         {visibleCardCount >= 7 && <div className="webDevelopmentCards h-[49px] w-[150px] m-2 mt-[63px] my-5 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-lg overflow-hidden">
          <div><h3>Maintenance and Updates</h3></div>
